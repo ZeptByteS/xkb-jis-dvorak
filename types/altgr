@@ -1,0 +1,82 @@
+partial default xkb_types "default" {
+    virtual_modifiers Meta,LevelThree;
+
+    type "ALTGR_ALPHABETIC"{
+        modifiers=
+            None+Shift+Lock+NumLock+LevelThree+Meta;
+        map[None                                    ]=level1;
+        map[           Lock                         ]=level2;
+        map[                NumLock                 ]=level5;
+        map[           Lock+NumLock                 ]=level5;
+        map[     Shift                              ]=level2;
+        map[     Shift+Lock                         ]=level1;
+        map[     Shift     +NumLock                 ]=level3;
+        map[     Shift+Lock+NumLock                 ]=level3;
+
+        map[                        LevelThree      ]=level3;
+        map[           Lock        +LevelThree      ]=level3;
+        map[                NumLock+LevelThree      ]=level3;
+        map[           Lock+NumLock+LevelThree      ]=level3;
+        map[     Shift             +LevelThree      ]=level5;
+        map[     Shift+Lock        +LevelThree      ]=level5;
+        map[     Shift     +NumLock+LevelThree      ]=level5;
+        map[     Shift+Lock+NumLock+LevelThree      ]=level5;
+
+        map[                                   Meta ]=level6;
+        map[           Lock                   +Meta ]=level6;
+        map[                NumLock           +Meta ]=level6;
+        map[           Lock+NumLock           +Meta ]=level6;
+        map[     Shift                        +Meta ]=level7;
+        map[     Shift+Lock                   +Meta ]=level7;
+        map[     Shift     +NumLock           +Meta ]=level7;
+        map[     Shift+Lock+NumLock           +Meta ]=level7;
+
+        level_name[Level1]= "Base";
+        level_name[Level2]= "Shift";
+        level_name[Level3]= "LevelThree";
+        level_name[Level4]= "Fake Keys";
+        level_name[Level5]= "LevelThree+Shift";
+        level_name[Level6]= "Meta";
+        level_name[Level7]= "Meta+Shift";
+    };
+
+    type "ALTGR_NUMERIC"{
+        modifiers=
+            None+Shift+Lock+NumLock+LevelThree+Meta;
+        map[None                                    ]=level1;
+        map[           Lock                         ]=level1;
+        map[                NumLock                 ]=level5;
+        map[           Lock+NumLock                 ]=level5;
+        map[     Shift                              ]=level2;
+        map[     Shift+Lock                         ]=level2;
+        map[     Shift     +NumLock                 ]=level3;
+        map[     Shift+Lock+NumLock                 ]=level3;
+
+        map[                        LevelThree      ]=level3;
+        map[           Lock        +LevelThree      ]=level3;
+        map[                NumLock+LevelThree      ]=level3;
+        map[           Lock+NumLock+LevelThree      ]=level3;
+        map[     Shift             +LevelThree      ]=level5;
+        map[     Shift+Lock        +LevelThree      ]=level5;
+        map[     Shift     +NumLock+LevelThree      ]=level5;
+        map[     Shift+Lock+NumLock+LevelThree      ]=level5;
+
+        map[                                   Meta ]=level6;
+        map[           Lock                   +Meta ]=level6;
+        map[                NumLock           +Meta ]=level6;
+        map[           Lock+NumLock           +Meta ]=level6;
+        map[     Shift                        +Meta ]=level7;
+        map[     Shift+Lock                   +Meta ]=level7;
+        map[     Shift     +NumLock           +Meta ]=level7;
+        map[     Shift+Lock+NumLock           +Meta ]=level7;
+
+        level_name[Level1]= "Base";
+        level_name[Level2]= "Shift";
+        level_name[Level3]= "LevelThree";
+        level_name[Level4]= "Fake Keys";
+        level_name[Level5]= "LevelThree+Shift";
+        level_name[Level6]= "Meta";
+        level_name[Level7]= "Meta+Shift";
+    };
+
+};

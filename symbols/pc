@@ -1,0 +1,163 @@
+default  partial alphanumeric_keys modifier_keys
+xkb_symbols "pc105" {
+
+    include "srvr_ctrl(fkey2vt)"
+    include "pc(editing)"
+    include "keypad(x11)"
+
+    key <ESC>  { [ Escape ] };
+    // The extra key on many European keyboards:
+    key <LSGT> { [ less, greater, bar, brokenbar ] };
+    key <NMLK> { [ Num_Lock     ] };
+
+    key <BKSP> { [ Delete       ] };
+    key  <TAB> { [ BackSpace,  BackSpace ] };
+    key <CAPS> { [ Control_L    ] };
+    key <RTRN> { [ Return       ] };
+    key <LFSH> { [ Tab,     ISO_Left_Tab ] };
+    key <RTSH> { [ Control_R    ] };
+    key <LCTL> { [ Meta_L       ] };
+    key <LWIN> { [ Control_L    ] };
+    key <LALT> { [ Alt_L        ] };
+    key <MUHE> { [ Shift_L      ] };
+    key <SPCE> { [ space        ] };
+    key <HENK> { [ ISO_Level3_Shift ] };
+    key <HKTG> { [ Shift_R      ] };
+    key <RALT> { [ Alt_R        ] };
+    key <MENU> { [ Menu         ] };
+    key <RCTL> { [ Super_L      ] };
+
+    // Beginning of modifier mappings.
+    modifier_map Shift  { Shift_L, Shift_R };
+    modifier_map Lock   { Caps_Lock };
+    modifier_map Control{ Control_L, Control_R, <LWIN> };
+    modifier_map Mod1   { Alt_L, Alt_R };
+    modifier_map Mod2   { Num_Lock, <PAUS> };
+    modifier_map Mod3   { Meta_L, Meta_R };
+    modifier_map Mod4   { Super_L, Super_R };
+
+
+    // Fake keys for virtual<->real modifiers mapping:
+    key <LVL3> {    [ ISO_Level3_Shift  ]   };
+    key <MDSW> {    [ Mode_switch       ]   };
+    modifier_map Mod5   { <LVL3>, <MDSW> };
+
+
+    key <OUTP> { [ XF86Display ] };
+    key <KITG> { [ XF86KbdLightOnOff ] };
+    key <KIDN> { [ XF86KbdBrightnessDown ] };
+    key <KIUP> { [ XF86KbdBrightnessUp ] };
+
+};
+
+hidden partial alphanumeric_keys
+xkb_symbols "editing" {
+    key <PRSC> {
+    type= "PC_ALT_LEVEL2",
+    symbols[Group1]= [ Print, Sys_Req ]
+    };
+    key <SCLK> { [ Caps_Lock    ] };
+    key <PAUS> { [ Num_Lock ] };
+    key  <INS> { [ XF86Back     ] };
+    key <HOME> { [ Prior        ] };
+    key <PGUP> { [ XF86Forward  ] };
+    key <DELE> { [ Home         ] };
+    key  <END> { [ Next         ] };
+    key <PGDN> { [ End          ] };
+    key   <UP> { [ Up           ] };
+    key <LEFT> { [ Left         ] };
+    key <DOWN> { [ Down         ] };
+    key <RGHT> { [ Right        ] };
+
+};
+
+
+// Default configurations
+//
+// default  partial alphanumeric_keys modifier_keys
+// xkb_symbols "pc105" {
+
+//     key <ESC>  {    [ Escape        ]   };
+
+//     // The extra key on many European keyboards:
+//     key <LSGT> {    [ less, greater, bar, brokenbar ] };
+
+//     // The following keys are common to all layouts.
+//     key <BKSL> {    [ backslash,    bar ]   };
+//     key <SPCE> {    [    space      ]   };
+
+//     include "srvr_ctrl(fkey2vt)"
+//     include "pc(editing)"
+//     include "keypad(x11)"
+
+//     key <BKSP> {    [ BackSpace, BackSpace  ]   };
+
+//     key  <TAB> {    [ Tab,  ISO_Left_Tab    ]   };
+//     key <RTRN> {    [ Return        ]   };
+
+//     key <CAPS> {    [ Caps_Lock     ]   };
+//     key <NMLK> {    [ Num_Lock      ]   };
+
+//     key <LFSH> {    [ Shift_L       ]   };
+//     key <LCTL> {    [ Control_L     ]   };
+//     key <LWIN> {    [ Super_L       ]   };
+
+//     key <RTSH> {    [ Shift_R       ]   };
+//     key <RCTL> {    [ Control_R     ]   };
+//     key <RWIN> {    [ Super_R       ]   };
+//     key <MENU> {    [ Menu          ]   };
+
+//     // Beginning of modifier mappings.
+//     modifier_map Shift  { Shift_L, Shift_R };
+//     modifier_map Lock   { Caps_Lock };
+//     modifier_map Control{ Control_L, Control_R };
+//     modifier_map Mod2   { Num_Lock };
+//     modifier_map Mod4   { Super_L, Super_R };
+
+//     // Fake keys for virtual<->real modifiers mapping:
+//     key <LVL3> {    [ ISO_Level3_Shift  ]   };
+//     key <MDSW> {    [ Mode_switch       ]   };
+//     modifier_map Mod5   { <LVL3>, <MDSW> };
+
+//     key <ALT>  {    [ NoSymbol, Alt_L   ]   };
+//     include "altwin(meta_alt)"
+
+//     key <META> {    [ NoSymbol, Meta_L  ]   };
+//     modifier_map Mod1   { <META> };
+
+//     key <SUPR> {    [ NoSymbol, Super_L ]   };
+//     modifier_map Mod4   { <SUPR> };
+
+//     key <HYPR> {    [ NoSymbol, Hyper_L ]   };
+//     modifier_map Mod4   { <HYPR> };
+//     // End of modifier mappings.
+
+//     key <OUTP> { [ XF86Display ] };
+//     key <KITG> { [ XF86KbdLightOnOff ] };
+//     key <KIDN> { [ XF86KbdBrightnessDown ] };
+//     key <KIUP> { [ XF86KbdBrightnessUp ] };
+// };
+
+// hidden partial alphanumeric_keys
+// xkb_symbols "editing" {
+//     key <PRSC> {
+//     type= "PC_ALT_LEVEL2",
+//     symbols[Group1]= [ Print, Sys_Req ]
+//     };
+//     key <SCLK> {    [  Scroll_Lock      ]   };
+//     key <PAUS> {
+//     type= "PC_CONTROL_LEVEL2",
+//     symbols[Group1]= [ Pause, Break ]
+//     };
+//     key  <INS> {    [  Insert       ]   };
+//     key <HOME> {    [  Home         ]   };
+//     key <PGUP> {    [  Prior        ]   };
+//     key <DELE> {    [  Delete       ]   };
+//     key  <END> {    [  End          ]   };
+//     key <PGDN> {    [  Next         ]   };
+
+//     key   <UP> {    [  Up           ]   };
+//     key <LEFT> {    [  Left         ]   };
+//     key <DOWN> {    [  Down         ]   };
+//     key <RGHT> {    [  Right        ]   };
+// };
