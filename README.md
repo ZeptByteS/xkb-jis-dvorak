@@ -78,4 +78,4 @@ Level4はkeyboard layout chartを見やすくするために用意した実際�
 
 MetaキーにはMod3を割り当ててあります.
 
-xkb/symbols/us内のbasicセクション(QWERTY配列)やデフォルトのDvorak配列のシンボルを参考にし,Level3~Level7のシンボルもしくはアクションを編集してください. カーソルキー,修飾キー付きの動作,および数字キーの入力は,RedirectKeyを使ったほうがちゃんと動きます.
+xkb/symbols/us内のbasicセクション(QWERTY配列)やデフォルトのDvorak配列のシンボルを参考にし,お使いの言語に合わせてLevel3~Level7のシンボルもしくはアクションを編集してください. カーソルキー,修飾キー付きの動作,および数字キーの入力は,RedirectKeyを使ったほうがちゃんと動きます.
