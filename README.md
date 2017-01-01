@@ -57,21 +57,21 @@ xkb/keycodes/evdevは,ScrollLockとNumLockのインジケータの位置を入�
 
 ### カスタマイズ
 
-xkb/symbols/us(dvorak)の設定は下記のようになっています.
+xkb/symbols/us(dvorak)の設定は下記のような構造になっています.
 
-```
+```c
 key <AD08> {
     symbols[Group1]=
-                     Level1       Level2          Level3        Level4          Level5
-                       Base        Shift           AltGr             -     AltGr+Shift
+                  // Level1       Level2          Level3        Level4          Level5
+                  //   Base        Shift           AltGr             -     AltGr+Shift
              [            c,           C,      braceleft,           Up,      braceleft ],
     actions[Group1]= 
              [   NoAction(),  NoAction(),     NoAction(),   NoAction(),     NoAction(),
              
-                       RedirectKey(key=<UP>, clearmods=Lock+Mod3),    Level6  Meta
-                       RedirectKey(key=<UP>, clearmods=Lock+Mod3) ]   Level7  Meta+Shift
+                       RedirectKey(key=<UP>, clearmods=Lock+Mod3),  //  Level6  Meta
+                       RedirectKey(key=<UP>, clearmods=Lock+Mod3) ] //  Level7  Meta+Shift
     };
-```    
+```     
     
 Level4はkeyboard layout chartを見やすくするために用意した実際には使われないシンボルです.
 
