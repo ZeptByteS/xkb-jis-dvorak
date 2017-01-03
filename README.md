@@ -79,3 +79,25 @@ Level4はkeyboard layout chartを見やすくするために用意した実際�
 MetaキーにはMod3を割り当ててあります.
 
 xkb/symbols/us内のbasicセクション(QWERTY配列)やデフォルトのDvorak配列のシンボルを参考にし,お使いの言語に合わせてLevel3~Level7のシンボルもしくはアクションを編集してください. カーソルキー,修飾キー付きの動作,および数字キーの入力は,RedirectKeyを使ったほうがちゃんと動きます.
+
+
+### キーがリピートしない場合
+
+
+Metaキーを使用してリダイレクトさせるキーがリピートしない場合は,```~/.bashrc```に以下のコマンドを追加してください
+
+
+    xset r 30 # <AD07> = G Home
+    xset r 31 # <AD08> = C Up
+    xset r 32 # <AD09> = R End
+    xset r 33 # <AD10> = L PageUp
+    
+    xset r 44 # <AC07> = H Left
+    xset r 45 # <AC08> = T Down
+    xset r 46 # <AC09> = N Right
+    xset r 47 # <AC10> = S PageDown
+    
+    xset r 52 # <AB01> = ; ctrl+Z
+    xset r 53 # <AB02> = Q ctrl+X
+    xset r 54 # <AB03> = J ctrl+C
+    xset r 55 # <AB04> = K ctrl+V
