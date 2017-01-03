@@ -219,7 +219,7 @@ xkb_symbols "dvorak" {
     key <AD11> { [        slash,    question ] };
     key <AD12> { [        equal,        plus ] };
     key <AC11> { [        minus,  underscore ] };
-    key <AC12> { [     NoSymbol ] };
+    key <BKSL> { [     NoSymbol ] };
     key <AB11> { [     NoSymbol ] };
 
     key.type[group1]="ALTGR_ALPHABETIC";
